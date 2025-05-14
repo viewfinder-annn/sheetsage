@@ -4,5 +4,9 @@ cloudrun/*.sh
 docker/*.sh
 docker/build_deps
 output/*
+output-no-jukebox/*
 notebooks/*
 sheetsage/assets/youtube.json
+
+
+from-github

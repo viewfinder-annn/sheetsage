@@ -3,6 +3,8 @@
 # NOTE: Override this with a local directory of your choosing
 SHEETSAGE_CACHE_DIR=$(python3 -c "import pathlib; print(pathlib.Path(pathlib.Path.home(), '.sheetsage').resolve())")
 
+SHEETSAGE_GITHUB_DIR=$(pwd)/from-github
+
 if [ -f "$(pwd)/setup.py" ] && [ -d "$(pwd)/sheetsage" ]; then
   DOCKER_LINK_LIB_ARG="-v $(pwd)/sheetsage:/sheetsage/sheetsage"
 else
@@ -29,6 +31,6 @@ docker run \
   -u $(id -u) \
   ${DOCKER_LINK_LIB_ARG} \
   -v $SHEETSAGE_CACHE_DIR:/sheetsage/cache \
-  chrisdonahue/sheetsage \
+  hub.littlediary.cn/chrisdonahue/sheetsage \
   /bin/bash -c \
   "python -m sheetsage.assets SHEETSAGE_V02_HANDCRAFTED ${JUKEBOX_CMD}"

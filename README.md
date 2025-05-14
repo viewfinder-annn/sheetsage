@@ -111,3 +111,20 @@ If you use this code or dataset in your research, please cite us via the followi
   year={2022}
 }
 ```
+
+
+```bash
+conda create -n sheetsage python=3.8 -y
+conda activate sheetsage
+conda create --prefix /aifs4su/mmcode/codeclm/musicbox/.env/sheetsage python=3.8 -y
+conda activate /aifs4su/mmcode/codeclm/musicbox/.env/sheetsage
+conda install -y -n sheetsage Cython numpy
+conda install -c conda-forge ffmpeg libsndfile
+conda install -c conda-forge openmpi=4.1.2 mpi4py
+pip install -r requirements_sheetsage.txt
+```
+
+# TODO:
+- ly2abc
+- ly2midi
+- batch infer

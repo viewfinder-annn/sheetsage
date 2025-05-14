@@ -1,0 +1,16 @@
+madmom
+numpy~=1.23.5
+scipy
+pretty-midi
+torch==2.0.1
+tqdm
+validators
+pillow
+jukebox @ git+https://github.com/chrisdonahue/jukebox.git@7e0a38b679ff3f64987d8297d9d0eb5a046880c1
+yt-dlp
+questionary
+tensorboard
+transformers
+miditoolkit
+python-ly
+pretty_midi
